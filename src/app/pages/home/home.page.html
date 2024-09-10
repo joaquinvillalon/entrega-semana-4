@@ -1,32 +1,53 @@
-<ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button (click)="cerrarSesionAlert()">
-        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title class="ion-text-center"
-      >Bienvenido {{login.usuario}} <strong></strong
-    ></ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
 
-<ion-footer>
-  <ion-toolbar>
-  <!--Dibujo pestañas con el ion-segment-->
-  <ion-segment (ionChange)="segmentChanged($event)">
-    <!--El valor del value es el que utilizaré para el enrutado
+    <ion-searchbar></ion-searchbar>
+    <h2>Categorias</h2>
+    <div class="category-buttons">
+      <ion-button color="primary" expand="block">Tecnología</ion-button>
+      <ion-button color="secondary" expand="block">Deportes</ion-button>
+      <ion-button color="tertiary" expand="block">Política</ion-button>
+      <ion-button color="success" expand="block">Economía</ion-button>
+      <ion-button color="warning" expand="block">Salud</ion-button>
+      <ion-button color="danger" expand="block">Entretenimiento</ion-button>
+    </div>
+
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>BenjaNews</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="cerrarSesionAlert()">Cerrar sesión<ion-icon name="person-circle-outline"></ion-icon></ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-footer>
+    <ion-toolbar>
+      <!--Dibujo pestañas con el ion-segment-->
+      <ion-segment (ionChange)="segmentChanged($event)"value="comp1">
+        <!--El valor del value es el que utilizaré para el enrutado
   Y es el que tomará como parámetro el $event-->
-    <ion-segment-button value="comp1">
-      <ion-icon name="home"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="comp2">
-      <ion-icon name="settings"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
-  </ion-toolbar>
-</ion-footer>
+        <ion-segment-button value="comp1">
+          <ion-icon name="home"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="comp2">
+          <ion-icon name="qr-code-outline"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-footer>
 
-<ion-content [fullscreen]="false">
-  <ion-router-outlet></ion-router-outlet>
-</ion-content>
+  <ion-content [fullscreen]="false">
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>

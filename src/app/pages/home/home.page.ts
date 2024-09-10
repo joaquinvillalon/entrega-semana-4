@@ -56,6 +56,7 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
+    this.router.navigate(['/home/comp1']);
   }
 
 
