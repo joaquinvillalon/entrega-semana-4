@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <div class="textoerror">
+    <h1 id="titulo">Error 404</h1>
+    <p>No se encuentra la página</p>
+  </div>
+  <div class="container">
+    <lottie-player
+      slot="end"
+      autoplay
+      loop
+      src="https://lottie.host/25329648-2904-468a-975e-0a1f8029887c/JGJFeBZCY1.json">
+    </lottie-player>
+  </div>
+
+  <div>
+    <p class="textoreferente">
+      Esta página no existe.
+    </p>
+    <ion-button id="button" routerLink="/login" expand="block" shape="round">
+      Volver al inicio
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Información Adicional
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-title class="ion-padding-top ion-text-center">
+  <ion-label>
+    <h1>Bienvenido/a </h1>
+  </ion-label>
+</ion-title>
+<b class="ion-text-center">
+  <h4>Datos Personales</h4>
+</b>
+<ion-item>
+  <ion-input label="Nombre" labelPlacement="floating"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input label="Apellido" labelPlacement="floating"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-select label="Nivel Educacional" label-placement="floating" placeholder="Seleccione" >
+    <!--{{Interpolación}} me permite traer desde el .ts datos al html-->
+  </ion-select>
+</ion-item>
+<ion-item>
+  <ion-input label="Fecha de Nacimiento" labelPlacement="floating" type="date"></ion-input>
+</ion-item>
+<ion-grid [fixed]="true">
+  <ion-row>
+    <ion-col><ion-button shape="block" >Limpiar</ion-button></ion-col>
+    <ion-col><ion-button shape="block" >Mostrar</ion-button></ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
