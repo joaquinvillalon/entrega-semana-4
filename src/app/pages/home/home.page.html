@@ -25,19 +25,18 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>BenjaNews</ion-title>
+      <ion-title>Hola, {{login.usuario}}</ion-title>
       <ion-buttons slot="end">
-        <ion-button (click)="cerrarSesionAlert()">Cerrar sesión<ion-icon name="person-circle-outline"></ion-icon></ion-button>
+        <ion-button (click)="cerrarSesionAlert()"><ion-icon name="close-circle-outline"></ion-icon></ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
   <ion-footer>
     <ion-toolbar>
-      <!--Dibujo pestañas con el ion-segment-->
-      <ion-segment (ionChange)="segmentChanged($event)"value="comp1">
-        <!--El valor del value es el que utilizaré para el enrutado
-  Y es el que tomará como parámetro el $event-->
+
+      <ion-segment (ionChange)="segmentChanged($event)" value="comp1">
+
         <ion-segment-button value="comp1">
           <ion-icon name="home"></ion-icon>
         </ion-segment-button>

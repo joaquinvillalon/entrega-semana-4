@@ -49,9 +49,10 @@ export class LoginPage implements OnInit {
   }
 
 
+
   Ingresar() {
     if (this.validateModel(this.login)) {
-      this.presentToast('bottom', 'Bienvenid@ ' + this.login.usuario);
+      this.presentToast('top', 'Bienvenid@ ' + this.login.usuario);
       //Generate state
       let navigationExtras: NavigationExtras = {
         state: { login: this.login },
@@ -61,6 +62,7 @@ export class LoginPage implements OnInit {
       this.presentToast('middle', 'Falta el campo ' + this.field, 3000);
     }
   }
+
 
 
 }

@@ -4,10 +4,7 @@
     <p>No se encuentra la página</p>
   </div>
   <div class="container">
-    <lottie-player
-      slot="end"
-      autoplay
-      loop
+    <lottie-player slot="end" autoplay loop
       src="https://lottie.host/25329648-2904-468a-975e-0a1f8029887c/JGJFeBZCY1.json">
     </lottie-player>
   </div>
@@ -16,8 +13,15 @@
     <p class="textoreferente">
       Esta página no existe.
     </p>
-    <ion-button id="button" routerLink="/login" expand="block" shape="round">
-      Volver al inicio
-    </ion-button>
+
+
+    <ion-row>
+      <ion-col size="12">
+        <button class="button-style" expand="block" shape="round" routerLink="/login">
+          Volver al inicio</button>
+      </ion-col>
+    </ion-row>
+
+
   </div>
 </ion-content>
